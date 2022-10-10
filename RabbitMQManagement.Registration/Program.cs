@@ -15,6 +15,10 @@ namespace RabbitMQManagement.Registration
                  {
                      e.Consumer<RegisterDemandCommandConsumer>();
                  });
+                cfg.ReceiveEndpoint(RabbitMqConsts.RegisterDemandServiceQueueUpdate, e =>
+                {
+                    e.Consumer<RegisterDemandCommandUpdateConsumer>();
+                });
             });
             bus.StartAsync();
             Console.WriteLine("Listening for Register Demand Commands.."+ "Press enter to exit");
