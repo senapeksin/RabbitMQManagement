@@ -21,7 +21,7 @@ namespace RabbitMQManagement.Registration
                 });
             });
             bus.StartAsync();
-            Console.WriteLine("Listening for Register Demand Commands.."+ "Press enter to exit");
+            Console.WriteLine("Listening for Register Demand Commands.."+ "Press enter to exitt");
             Console.ReadLine();
             bus.StopAsync(); 
         }

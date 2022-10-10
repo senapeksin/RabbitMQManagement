@@ -19,7 +19,7 @@ namespace RabbitMQManagement.Notification
             bus.StartAsync();
             Console.WriteLine("Listening for  Demand registered Events.." + "Press enter to exit");
             Console.ReadLine();
-            bus.StopAsync();
+            bus.StopAsync();  
         }
     }
 }
